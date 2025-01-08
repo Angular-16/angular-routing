@@ -23,6 +23,8 @@ export class CardComponent {
   public selectPie(pie: Pie): void {
     this.router.navigate([`../${ROUTES_LINKS.SHOP}`, pie.id], {
       relativeTo: this.activatedRoute,
+      queryParams: { productId: pie.id },
+      queryParamsHandling: "merge",
     });
   }
 }
