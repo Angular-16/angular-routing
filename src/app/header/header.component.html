@@ -1,0 +1,54 @@
+<header class="site-header">
+  <div class="site-header-wrapper">
+    <h1>
+      <button
+        [routerLink]="['/']"
+        mat-menu-item
+      ><img src="../../assets/images/logo.png" alt="Bethany's Pie Shop Logo" /></button>
+    </h1>
+    <nav>
+      <ul>
+        <li>
+          <button
+            class="menu-item"
+            routerLinkActive="active-link"
+            ariaCurrentWhenActive="page"
+            mat-button
+            [matMenuTriggerFor]="menu"
+          >Shop
+            <span>&#8964;</span>
+            <mat-menu class="menu-dropdown" #menu="matMenu">
+              <button
+                [routerLink]="[ROUTES_LINKS.SHOP, Category.SEASONAL_PIE]"
+                routerLinkActive="active-link-li"
+                mat-menu-item
+              >Seasonal Pies</button>
+              <button
+                [routerLink]="[ROUTES_LINKS.SHOP, Category.FRUIT_PIE]"
+                routerLinkActive="active-link-li"
+                mat-menu-item
+              >Fruit Pies</button>
+              <button
+                [routerLink]="[ROUTES_LINKS.SHOP, Category.CHEESECAKE]"
+                routerLinkActive="active-link-li"
+                mat-menu-item
+              >Cheesecakes</button>
+              <button
+                [routerLink]="[ROUTES_LINKS.SHOP, Category.ALL]"
+                routerLinkActive="active-link-li"
+                mat-menu-item
+              >All Pies</button>
+            </mat-menu>
+          </button>
+        </li>
+        <li><button [routerLink]="[ROUTES_LINKS.CONTACT]" routerLinkActive="active-link" class="menu-item" mat-button>Contact</button></li>
+        <li><button [routerLink]="[ROUTES_LINKS.SHOP]" routerLinkActive="active-link" class="menu-item" mat-button>About</button></li>
+      </ul>
+    </nav>
+    <div class="header-icons">
+      <ul>
+        <li><button mat-menu-item><img src="../../assets/images/cart-icon.png" alt="shopping cart icon" /></button></li>
+      </ul>
+    </div>
+  </div> 
+</header>
