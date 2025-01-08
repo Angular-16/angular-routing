@@ -1,22 +1,22 @@
-import { Routes } from "@angular/router";
-import { HomeComponent } from "./home/home.component";
-import { NotFoundComponent } from "./not-found/not-found.component";
-import { AboutComponent } from "./about/about.component";
-import { ContactComponent } from "./contact/contact.component";
-import { ProductsViewComponent } from "./products-view/products-view.component";
+import { Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { ProductsViewComponent } from './products-view/products-view.component';
 
 export enum ROUTES_LINKS {
-  HOME = "home",
-  ABOUT = "about",
-  CONTACT = "contact",
-  SHOP = "shop",
+  HOME = 'home',
+  ABOUT = 'about',
+  CONTACT = 'contact',
+  SHOP = 'shop',
 }
 
 export const ROUTES: Routes = [
   {
-    path: "",
+    path: '',
     redirectTo: ROUTES_LINKS.HOME,
-    pathMatch: "full",
+    pathMatch: 'full',
   },
   {
     path: ROUTES_LINKS.HOME,
@@ -35,7 +35,7 @@ export const ROUTES: Routes = [
     component: ProductsViewComponent,
   },
   {
-    path: "**",
+    path: '**',
     component: NotFoundComponent,
   },
 ];
