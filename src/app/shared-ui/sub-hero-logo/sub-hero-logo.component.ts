@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
   imports: [],
   selector: 'app-sub-hero-logo',
   templateUrl: './sub-hero-logo.component.html',
-  styleUrls: ['./sub-hero-logo.component.css']
+  styleUrls: ['./sub-hero-logo.component.css'],
 })
-export class SubHeroLogoComponent {
-
-}
+export class SubHeroLogoComponent {}

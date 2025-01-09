@@ -18,9 +18,9 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatButtonModule,
   ],
   templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.css']
+  styleUrls: ['./contact.component.css'],
 })
-export class ContactComponent implements OnDestroy{
+export class ContactComponent implements OnDestroy {
   readonly contactService = inject(ContactService);
   destroyed$ = new ReplaySubject<void>(1);
 
@@ -30,6 +30,7 @@ export class ContactComponent implements OnDestroy{
     phone: '',
     comment: '',
   };
+
   submitted = false;
   loading = false;
 
@@ -37,11 +38,12 @@ export class ContactComponent implements OnDestroy{
     this.submitted = true;
     this.loading = true;
 
-    this.contactService.submitContactForm(model).pipe(
-      takeUntil(this.destroyed$)
-    ).subscribe(() => {
-      this.loading = false;
-    })
+    this.contactService
+      .submitContactForm(model)
+      .pipe(takeUntil(this.destroyed$))
+      .subscribe(() => {
+        this.loading = false;
+      });
   }
 
   clearForm() {
@@ -51,7 +53,7 @@ export class ContactComponent implements OnDestroy{
       email: '',
       phone: '',
       comment: '',
-    }
+    };
   }
 
   ngOnDestroy(): void {

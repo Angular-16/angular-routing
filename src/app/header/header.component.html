@@ -41,13 +41,34 @@
             </mat-menu>
           </button>
         </li>
-        <li><button [routerLink]="[ROUTES_LINKS.CONTACT]" routerLinkActive="active-link" class="menu-item" mat-button>Contact</button></li>
-        <li><button [routerLink]="[ROUTES_LINKS.SHOP]" routerLinkActive="active-link" class="menu-item" mat-button>About</button></li>
+        <li>
+          <button
+            [routerLink]="[ROUTES_LINKS.CONTACT]"
+            routerLinkActive="active-link"
+            class="menu-item"
+            mat-button
+          >Contact</button>
+        </li>
+        <li>
+          <button
+            [routerLink]="[ROUTES_LINKS.SHOP]"
+            routerLinkActive="active-link"
+            class="menu-item"
+            mat-button
+          >About</button>
+        </li>
       </ul>
     </nav>
     <div class="header-icons">
       <ul>
-        <li><button mat-menu-item><img src="../../assets/images/cart-icon.png" alt="shopping cart icon" /></button></li>
+        <li>
+          <button mat-menu-item>
+            <img
+              src="../../assets/images/cart-icon.png"
+              alt="shopping cart icon"
+            />
+          </button>
+        </li>
       </ul>
     </div>
   </div> 

@@ -4,12 +4,8 @@ import { SubSectionComponent } from './sub-section/sub-section.component';
 
 @Component({
   standalone: true,
-  imports: [
-    HeroSectionComponent,
-    SubSectionComponent,
-  ],
+  imports: [HeroSectionComponent, SubSectionComponent],
   selector: 'app-home',
   templateUrl: './home.component.html',
 })
-export class HomeComponent {
-}
+export class HomeComponent {}

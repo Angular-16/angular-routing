@@ -5,15 +5,12 @@ import { NgFor } from '@angular/common';
 
 @Component({
   standalone: true,
-  imports: [
-    CardComponent,
-    NgFor,
-  ],
+  imports: [CardComponent, NgFor],
   selector: 'app-sub-section',
   templateUrl: './sub-section.component.html',
-  styleUrls: ['./sub-section.component.css']
+  styleUrls: ['./sub-section.component.css'],
 })
 export class SubSectionComponent {
-  readonly cartService = inject(CartService);
-  featuredProducts = this.cartService.featuredPiesPlusQuantity;
+  public readonly featuredProducts =
+    inject(CartService).featuredPiesPlusQuantity;
 }
